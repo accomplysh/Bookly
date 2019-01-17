@@ -163,6 +163,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BooklyContext.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookStatus.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
