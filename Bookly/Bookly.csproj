@@ -160,6 +160,10 @@
     <Compile Include="Migrations\201901090930050_Bookly1.0.Designer.cs">
       <DependentUpon>201901090930050_Bookly1.0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901170312193_addCustomerTable.cs" />
+    <Compile Include="Migrations\201901170312193_addCustomerTable.Designer.cs">
+      <DependentUpon>201901170312193_addCustomerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BooklyContext.cs" />
     <Compile Include="Models\Book.cs" />
@@ -235,6 +239,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901090930050_Bookly1.0.resx">
       <DependentUpon>201901090930050_Bookly1.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170312193_addCustomerTable.resx">
+      <DependentUpon>201901170312193_addCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
