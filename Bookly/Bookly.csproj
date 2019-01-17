@@ -164,9 +164,50 @@
     <Compile Include="Migrations\201901170312193_addCustomerTable.Designer.cs">
       <DependentUpon>201901170312193_addCustomerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901170319150_addedBookYearPublished.cs" />
+    <Compile Include="Migrations\201901170319150_addedBookYearPublished.Designer.cs">
+      <DependentUpon>201901170319150_addedBookYearPublished.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170324516_addedBookCustomerRelationship.cs" />
+    <Compile Include="Migrations\201901170324516_addedBookCustomerRelationship.Designer.cs">
+      <DependentUpon>201901170324516_addedBookCustomerRelationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170333068_removedBookIDFromCustomerModel.cs" />
+    <Compile Include="Migrations\201901170333068_removedBookIDFromCustomerModel.Designer.cs">
+      <DependentUpon>201901170333068_removedBookIDFromCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170340448_addedBookStatusModel.cs" />
+    <Compile Include="Migrations\201901170340448_addedBookStatusModel.Designer.cs">
+      <DependentUpon>201901170340448_addedBookStatusModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170343334_addedBookStatusModelToContext.cs" />
+    <Compile Include="Migrations\201901170343334_addedBookStatusModelToContext.Designer.cs">
+      <DependentUpon>201901170343334_addedBookStatusModelToContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170345249_updatedBookStatusModel.cs" />
+    <Compile Include="Migrations\201901170345249_updatedBookStatusModel.Designer.cs">
+      <DependentUpon>201901170345249_updatedBookStatusModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170357226_updateBookAndCustomerModel.cs" />
+    <Compile Include="Migrations\201901170357226_updateBookAndCustomerModel.Designer.cs">
+      <DependentUpon>201901170357226_updateBookAndCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170548448_updateBookAndCustomerModel2.cs" />
+    <Compile Include="Migrations\201901170548448_updateBookAndCustomerModel2.Designer.cs">
+      <DependentUpon>201901170548448_updateBookAndCustomerModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170605532_updateBookAndCustomerModel3.cs" />
+    <Compile Include="Migrations\201901170605532_updateBookAndCustomerModel3.Designer.cs">
+      <DependentUpon>201901170605532_updateBookAndCustomerModel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901170632592_updateBookStatus3.cs" />
+    <Compile Include="Migrations\201901170632592_updateBookStatus3.Designer.cs">
+      <DependentUpon>201901170632592_updateBookStatus3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BooklyContext.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookStatus.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -242,6 +283,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901170312193_addCustomerTable.resx">
       <DependentUpon>201901170312193_addCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170319150_addedBookYearPublished.resx">
+      <DependentUpon>201901170319150_addedBookYearPublished.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170324516_addedBookCustomerRelationship.resx">
+      <DependentUpon>201901170324516_addedBookCustomerRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170333068_removedBookIDFromCustomerModel.resx">
+      <DependentUpon>201901170333068_removedBookIDFromCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170340448_addedBookStatusModel.resx">
+      <DependentUpon>201901170340448_addedBookStatusModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170343334_addedBookStatusModelToContext.resx">
+      <DependentUpon>201901170343334_addedBookStatusModelToContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170345249_updatedBookStatusModel.resx">
+      <DependentUpon>201901170345249_updatedBookStatusModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170357226_updateBookAndCustomerModel.resx">
+      <DependentUpon>201901170357226_updateBookAndCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170548448_updateBookAndCustomerModel2.resx">
+      <DependentUpon>201901170548448_updateBookAndCustomerModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170605532_updateBookAndCustomerModel3.resx">
+      <DependentUpon>201901170605532_updateBookAndCustomerModel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170632592_updateBookStatus3.resx">
+      <DependentUpon>201901170632592_updateBookStatus3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
