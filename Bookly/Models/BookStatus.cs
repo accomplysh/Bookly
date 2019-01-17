@@ -9,9 +9,7 @@ namespace Bookly.Models
     public class BookStatus
     {
        public int Id { get; set; }
-        public Book Book { get; set; }
-        
-        public Guid Identifier { get; set; }
+        public Book Book { get; set; }             
         public Customer Customer { get; set; }
     }
 }

@@ -204,11 +204,37 @@
     <Compile Include="Migrations\201901170632592_updateBookStatus3.Designer.cs">
       <DependentUpon>201901170632592_updateBookStatus3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901170943209_RemovedGuidFromBookStatusAndCustomerIdFromBooks.cs" />
+    <Compile Include="Migrations\201901170943209_RemovedGuidFromBookStatusAndCustomerIdFromBooks.Designer.cs">
+      <DependentUpon>201901170943209_RemovedGuidFromBookStatusAndCustomerIdFromBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171019482_addedMembershipType.cs" />
+    <Compile Include="Migrations\201901171019482_addedMembershipType.Designer.cs">
+      <DependentUpon>201901171019482_addedMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171029520_removeMemberShipTypesFromDB.cs" />
+    <Compile Include="Migrations\201901171029520_removeMemberShipTypesFromDB.Designer.cs">
+      <DependentUpon>201901171029520_removeMemberShipTypesFromDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171034488_deleteDataFromMembership.cs" />
+    <Compile Include="Migrations\201901171034488_deleteDataFromMembership.Designer.cs">
+      <DependentUpon>201901171034488_deleteDataFromMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171035397_addMoreMembershipTypes.cs" />
+    <Compile Include="Migrations\201901171035397_addMoreMembershipTypes.Designer.cs">
+      <DependentUpon>201901171035397_addMoreMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901171046544_addMoreDataToMembershipTypes.cs" />
+    <Compile Include="Migrations\201901171046544_addMoreDataToMembershipTypes.Designer.cs">
+      <DependentUpon>201901171046544_addMoreDataToMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BooklyContext.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookStatus.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +339,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901170632592_updateBookStatus3.resx">
       <DependentUpon>201901170632592_updateBookStatus3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901170943209_RemovedGuidFromBookStatusAndCustomerIdFromBooks.resx">
+      <DependentUpon>201901170943209_RemovedGuidFromBookStatusAndCustomerIdFromBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171019482_addedMembershipType.resx">
+      <DependentUpon>201901171019482_addedMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171029520_removeMemberShipTypesFromDB.resx">
+      <DependentUpon>201901171029520_removeMemberShipTypesFromDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171034488_deleteDataFromMembership.resx">
+      <DependentUpon>201901171034488_deleteDataFromMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171035397_addMoreMembershipTypes.resx">
+      <DependentUpon>201901171035397_addMoreMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171046544_addMoreDataToMembershipTypes.resx">
+      <DependentUpon>201901171046544_addMoreDataToMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
