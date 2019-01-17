@@ -1,0 +1,22 @@
+﻿@model List<Bookly.Models.Customer>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (!Model.Any())
+{
+    <h2>No Customers Yet</h2>
+}
+else
+{
+    <h2>Total Customers @Model.Count()</h2>
+    foreach (var cust in Model)
+    {
+         <h2>@Html.ActionLink(cust.FirstName + " " + @cust.LastName, "Details", "Customers", new {id = cust.Id}, null) </h2>
+    }   
+}
+
+
+
