@@ -10,11 +10,32 @@ namespace Bookly.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        enum BookStatus
+        enum Status
         {
             CheckedOut,
             CheckedIn,
-            OverDue
+            Overdue
         };
+
+        enum CheckoutDuration
+        {
+            OneWeek,
+            TwoWeeks,
+            ThreeWeeks
+        }
+
+        enum Category
+        {
+            Biography,
+            Business,
+            Science,
+            Sports,
+            SelfHelp,
+            Religion,
+            Programming,
+            Design,
+            Travel,
+            Literature
+        }
     }
 }
