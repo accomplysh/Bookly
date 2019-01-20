@@ -240,6 +240,10 @@
     <Compile Include="Migrations\201901202308360_addedPublisherPropertyToBookModel.Designer.cs">
       <DependentUpon>201901202308360_addedPublisherPropertyToBookModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901202314043_addedAddressProperties.cs" />
+    <Compile Include="Migrations\201901202314043_addedAddressProperties.Designer.cs">
+      <DependentUpon>201901202314043_addedAddressProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BooklyContext.cs" />
@@ -378,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901202308360_addedPublisherPropertyToBookModel.resx">
       <DependentUpon>201901202308360_addedPublisherPropertyToBookModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901202314043_addedAddressProperties.resx">
+      <DependentUpon>201901202314043_addedAddressProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
