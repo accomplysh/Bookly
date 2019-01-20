@@ -9,10 +9,24 @@ namespace Bookly.Controllers
 {
     public class CustomersController : Controller
     {
+        private BooklyContext _context;
+
+        public CustomersController()
+        {
+            _context = new BooklyContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = GetCustomers();
+            var customers = _context.Customers.ToList();
+
+          
+         //   var customers = GetCustomers();
             
             return View(customers);
         }
@@ -34,7 +48,8 @@ namespace Bookly.Controllers
              * It then checks the available class properties and enables access to those properties.
              * Which then allows accessing the data of the properties of a specific customer.
              */
-            var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
+            //var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
 

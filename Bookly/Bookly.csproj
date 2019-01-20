@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201901171046544_addMoreDataToMembershipTypes.Designer.cs">
       <DependentUpon>201901171046544_addMoreDataToMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901171122335_AddDataAnnotationsToBookModel.cs" />
+    <Compile Include="Migrations\201901171122335_AddDataAnnotationsToBookModel.Designer.cs">
+      <DependentUpon>201901171122335_AddDataAnnotationsToBookModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BooklyContext.cs" />
@@ -357,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901171046544_addMoreDataToMembershipTypes.resx">
       <DependentUpon>201901171046544_addMoreDataToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901171122335_AddDataAnnotationsToBookModel.resx">
+      <DependentUpon>201901171122335_AddDataAnnotationsToBookModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
