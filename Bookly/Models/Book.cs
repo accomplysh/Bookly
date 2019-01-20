@@ -16,6 +16,8 @@ namespace Bookly.Models
         public int YearPublished { get; set; }
 
         public string Author { get; set; }
+
+        public string Publisher { get; set; }
        // public Customer Customer { get; set; }
 
 
