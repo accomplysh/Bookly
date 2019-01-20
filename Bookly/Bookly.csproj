@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201901171122335_AddDataAnnotationsToBookModel.Designer.cs">
       <DependentUpon>201901171122335_AddDataAnnotationsToBookModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901202306099_addedAuthorPropertyToBookModel.cs" />
+    <Compile Include="Migrations\201901202306099_addedAuthorPropertyToBookModel.Designer.cs">
+      <DependentUpon>201901202306099_addedAuthorPropertyToBookModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BooklyContext.cs" />
@@ -364,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901171122335_AddDataAnnotationsToBookModel.resx">
       <DependentUpon>201901171122335_AddDataAnnotationsToBookModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901202306099_addedAuthorPropertyToBookModel.resx">
+      <DependentUpon>201901202306099_addedAuthorPropertyToBookModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
