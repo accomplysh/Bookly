@@ -55,7 +55,7 @@ namespace Bookly.Controllers
 
             return View(customer);
         }
-        
+        /* Not Used after Section 3 - video 29 */
         private IEnumerable<Customer> GetCustomers()
         {
             var customers = new List<Customer>
