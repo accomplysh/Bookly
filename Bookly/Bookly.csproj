@@ -244,6 +244,14 @@
     <Compile Include="Migrations\201901202314043_addedAddressProperties.Designer.cs">
       <DependentUpon>201901202314043_addedAddressProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901202318375_addAddressToContext.cs" />
+    <Compile Include="Migrations\201901202318375_addAddressToContext.Designer.cs">
+      <DependentUpon>201901202318375_addAddressToContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901202320111_addAddressToCustomerModel.cs" />
+    <Compile Include="Migrations\201901202320111_addAddressToCustomerModel.Designer.cs">
+      <DependentUpon>201901202320111_addAddressToCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BooklyContext.cs" />
@@ -385,6 +393,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901202314043_addedAddressProperties.resx">
       <DependentUpon>201901202314043_addedAddressProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901202318375_addAddressToContext.resx">
+      <DependentUpon>201901202318375_addAddressToContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901202320111_addAddressToCustomerModel.resx">
+      <DependentUpon>201901202320111_addAddressToCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

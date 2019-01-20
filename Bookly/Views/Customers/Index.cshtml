@@ -14,7 +14,10 @@ else
     <h2>Total Customers @Model.Count()</h2>
     foreach (var cust in Model)
     {
-         <h2>@Html.ActionLink(cust.FirstName + " " + @cust.LastName, "Details", "Customers", new {id = cust.Id}, null) </h2>
+        <h2>@Html.ActionLink(cust.FirstName + " " + @cust.LastName, "Details", "Customers", new {id = cust.Id}, null) </h2>
+        <h3>@cust.Address.AddressName</h3>
+
+                                                                                                                      
     }   
 }
 

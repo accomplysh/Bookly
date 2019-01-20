@@ -13,6 +13,7 @@ namespace Bookly.Models
        public DbSet<Customer> Customers { get; set; }
        public DbSet<BookStatus> BookStatus  { get; set; }
        public DbSet<MembershipType> MembershipTypes { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
     }
 }
