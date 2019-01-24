@@ -24,6 +24,9 @@ namespace Bookly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
+            /* Include method load related objects of class. In this instance Address it a related class to Customer class
+             * As defined in the Customer class.             
+             */
             var customers = _context.Customers.Include(c => c.Address).ToList();
 
           
@@ -50,7 +53,7 @@ namespace Bookly.Controllers
              * Which then allows accessing the data of the properties of a specific customer.
              */
             //var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(m => m.MembershipType).SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
 

@@ -10,6 +10,7 @@ namespace Bookly.Models
         public byte Id { get; set; }
         public int Fee { get; set; }
         public int DurationInMonths { get; set; }
+        public string Name { get; set; }
 
     }
 }

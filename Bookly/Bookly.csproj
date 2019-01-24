@@ -252,6 +252,30 @@
     <Compile Include="Migrations\201901202320111_addAddressToCustomerModel.Designer.cs">
       <DependentUpon>201901202320111_addAddressToCustomerModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901231042468_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201901231042468_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201901231042468_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240857037_updateMembershipTypesTable.cs" />
+    <Compile Include="Migrations\201901240857037_updateMembershipTypesTable.Designer.cs">
+      <DependentUpon>201901240857037_updateMembershipTypesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240904130_addDOBToCustomerModel.cs" />
+    <Compile Include="Migrations\201901240904130_addDOBToCustomerModel.Designer.cs">
+      <DependentUpon>201901240904130_addDOBToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240905416_UpdateCustomerDOB.cs" />
+    <Compile Include="Migrations\201901240905416_UpdateCustomerDOB.Designer.cs">
+      <DependentUpon>201901240905416_UpdateCustomerDOB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240913533_addRelationshipCustomer-MembershipType.cs" />
+    <Compile Include="Migrations\201901240913533_addRelationshipCustomer-MembershipType.Designer.cs">
+      <DependentUpon>201901240913533_addRelationshipCustomer-MembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901240915037_setCustomerMembershipType.cs" />
+    <Compile Include="Migrations\201901240915037_setCustomerMembershipType.Designer.cs">
+      <DependentUpon>201901240915037_setCustomerMembershipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BooklyContext.cs" />
@@ -399,6 +423,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901202320111_addAddressToCustomerModel.resx">
       <DependentUpon>201901202320111_addAddressToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901231042468_AddNameToMembershipType.resx">
+      <DependentUpon>201901231042468_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240857037_updateMembershipTypesTable.resx">
+      <DependentUpon>201901240857037_updateMembershipTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240904130_addDOBToCustomerModel.resx">
+      <DependentUpon>201901240904130_addDOBToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240905416_UpdateCustomerDOB.resx">
+      <DependentUpon>201901240905416_UpdateCustomerDOB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240913533_addRelationshipCustomer-MembershipType.resx">
+      <DependentUpon>201901240913533_addRelationshipCustomer-MembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901240915037_setCustomerMembershipType.resx">
+      <DependentUpon>201901240915037_setCustomerMembershipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
