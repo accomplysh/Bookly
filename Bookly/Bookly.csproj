@@ -276,8 +276,29 @@
     <Compile Include="Migrations\201901240915037_setCustomerMembershipType.Designer.cs">
       <DependentUpon>201901240915037_setCustomerMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901241038450_addISBNToDbSet.cs" />
+    <Compile Include="Migrations\201901241038450_addISBNToDbSet.Designer.cs">
+      <DependentUpon>201901241038450_addISBNToDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241039167_updateBooksTable.cs" />
+    <Compile Include="Migrations\201901241039167_updateBooksTable.Designer.cs">
+      <DependentUpon>201901241039167_updateBooksTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241049492_addBooksToBooksTable.cs" />
+    <Compile Include="Migrations\201901241049492_addBooksToBooksTable.Designer.cs">
+      <DependentUpon>201901241049492_addBooksToBooksTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241102094_addBookCategoryModelToDbSet.cs" />
+    <Compile Include="Migrations\201901241102094_addBookCategoryModelToDbSet.Designer.cs">
+      <DependentUpon>201901241102094_addBookCategoryModelToDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241103122_addBookCategoriesToDB.cs" />
+    <Compile Include="Migrations\201901241103122_addBookCategoriesToDB.Designer.cs">
+      <DependentUpon>201901241103122_addBookCategoriesToDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\BookCategory.cs" />
     <Compile Include="Models\BooklyContext.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookStatus.cs" />
@@ -441,6 +462,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901240915037_setCustomerMembershipType.resx">
       <DependentUpon>201901240915037_setCustomerMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241038450_addISBNToDbSet.resx">
+      <DependentUpon>201901241038450_addISBNToDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241039167_updateBooksTable.resx">
+      <DependentUpon>201901241039167_updateBooksTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241049492_addBooksToBooksTable.resx">
+      <DependentUpon>201901241049492_addBooksToBooksTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241102094_addBookCategoryModelToDbSet.resx">
+      <DependentUpon>201901241102094_addBookCategoryModelToDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241103122_addBookCategoriesToDB.resx">
+      <DependentUpon>201901241103122_addBookCategoriesToDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -18,6 +18,9 @@ namespace Bookly.Models
         public string Author { get; set; }
 
         public string Publisher { get; set; }
+
+        public string ISBN { get; set; }
+
        // public Customer Customer { get; set; }
 
 
@@ -35,18 +38,6 @@ namespace Bookly.Models
             ThreeWeeks
         }
 
-        enum Category
-        {
-            Biography,
-            Business,
-            Science,
-            Sports,
-            SelfHelp,
-            Religion,
-            Programming,
-            Design,
-            Travel,
-            Literature
-        }
+       
     }
 }
