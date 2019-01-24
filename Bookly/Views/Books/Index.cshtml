@@ -1,7 +1,15 @@
-﻿@model Bookly.Models.Book
+﻿@model List<Bookly.Models.Book>
 @{
-    ViewBag.Title = "Books I Read";
+    ViewBag.Title = "Catalog of Books";
 }
 
-<h2>@Model.Name</h2>
+@foreach (var book in Model)
+{
+    <h2>@book.Name</h2>
+    <h3>@book.Author</h3>
+    <h3>Category: @book.BookCategory.Name</h3>
+    <h3>@book.Publisher, @book.YearPublished</h3>
+}
+
+
 

@@ -20,6 +20,7 @@ namespace Bookly.Models
         public string Publisher { get; set; }
 
         public string ISBN { get; set; }
+        public BookCategory BookCategory { get; set; }
 
        // public Customer Customer { get; set; }
 

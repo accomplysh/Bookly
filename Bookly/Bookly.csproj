@@ -296,6 +296,14 @@
     <Compile Include="Migrations\201901241103122_addBookCategoriesToDB.Designer.cs">
       <DependentUpon>201901241103122_addBookCategoriesToDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901241109081_addRelationshipBookToBookCategory.cs" />
+    <Compile Include="Migrations\201901241109081_addRelationshipBookToBookCategory.Designer.cs">
+      <DependentUpon>201901241109081_addRelationshipBookToBookCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901241109466_setBookCategories.cs" />
+    <Compile Include="Migrations\201901241109466_setBookCategories.Designer.cs">
+      <DependentUpon>201901241109466_setBookCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BookCategory.cs" />
@@ -477,6 +485,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901241103122_addBookCategoriesToDB.resx">
       <DependentUpon>201901241103122_addBookCategoriesToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241109081_addRelationshipBookToBookCategory.resx">
+      <DependentUpon>201901241109081_addRelationshipBookToBookCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901241109466_setBookCategories.resx">
+      <DependentUpon>201901241109466_setBookCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
