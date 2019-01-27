@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Bookly.Models;
+using Bookly.ViewModels;
 
 namespace Bookly.Controllers
 {
@@ -21,6 +22,16 @@ namespace Bookly.Controllers
         {
             _context.Dispose();
         }
+        public ActionResult NewCustomer()
+        {
+            
+            
+            return View();
+        }
+
+
+
+
         // GET: Customers
         public ActionResult Index()
         {
@@ -53,10 +64,29 @@ namespace Bookly.Controllers
              * Which then allows accessing the data of the properties of a specific customer.
              */
             //var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
+            
+            //Select statement returns a boolean instead of records
+            //var bookStatus = _context.BookStatus.Select(cu => cu.Customer.Id == id).ToList();
+            //var bookStatus = new List<BookStatus>()
+            //{
+            //    new BookStatus
+            //    {
+            //        Book = new Book(),
+            //        Customer = new Customer()
+                    
+            //    }
+                
+            //};
+           
             var customer = _context.Customers.Include(m => m.MembershipType).SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
 
+            //var CustomerBooksVM = new CustomerBooksViewModel()
+            //{
+            //    BookStatuses = bookStatus,
+            //    Customer = customer
+            //};
             return View(customer);
         }
         /* Not Used after Section 3 - video 29 */
