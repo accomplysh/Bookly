@@ -312,6 +312,14 @@
     <Compile Include="Migrations\201901241156556_addBookStatuses.Designer.cs">
       <DependentUpon>201901241156556_addBookStatuses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901271114244_addDataAnnotationsToCustomerModel.cs" />
+    <Compile Include="Migrations\201901271114244_addDataAnnotationsToCustomerModel.Designer.cs">
+      <DependentUpon>201901271114244_addDataAnnotationsToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901271259159_addMembershipTypeIdProperty.cs" />
+    <Compile Include="Migrations\201901271259159_addMembershipTypeIdProperty.Designer.cs">
+      <DependentUpon>201901271259159_addMembershipTypeIdProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BookCategory.cs" />
@@ -322,6 +330,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CustomerBooksViewModel.cs" />
+    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -506,6 +515,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901241156556_addBookStatuses.resx">
       <DependentUpon>201901241156556_addBookStatuses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901271114244_addDataAnnotationsToCustomerModel.resx">
+      <DependentUpon>201901271114244_addDataAnnotationsToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901271259159_addMembershipTypeIdProperty.resx">
+      <DependentUpon>201901271259159_addMembershipTypeIdProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

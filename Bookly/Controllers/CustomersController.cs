@@ -22,14 +22,26 @@ namespace Bookly.Controllers
         {
             _context.Dispose();
         }
+       
         public ActionResult NewCustomer()
         {
-            
-            
-            return View();
+            var membershipTypes = _context.MembershipTypes.ToList();
+
+            var customerViewModel =  new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+
+                
+            };
+            return View(customerViewModel);
         }
-
-
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction("NewCustomer","Customers");
+        }
 
 
         // GET: Customers

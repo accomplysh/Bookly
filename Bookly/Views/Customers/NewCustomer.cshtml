@@ -1,36 +1,43 @@
-﻿@model Bookly.Models.Customer
+﻿
+
+@model Bookly.ViewModels.NewCustomerViewModel
 @{
     ViewBag.Title = "NewCustomer";
 }
 
 <h2>New Customer</h2>
 
-@using (Html.BeginForm("NewCustomer", "Customers"))
+@using (Html.BeginForm("Save", "Customers"))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.FirstName)
-        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control"})
+        @Html.LabelFor(c => c.Customer.FirstName)
+        @Html.TextBoxFor(c => c.Customer.FirstName, new { @class = "form-control"})
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.LastName)
-        @Html.TextBoxFor(m => m.LastName, new  { @class = "form-control"})
+        @Html.LabelFor(c => c.Customer.LastName)
+        @Html.TextBoxFor(c => c.Customer.LastName, new  { @class = "form-control"})
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Address)
-        @Html.TextBoxFor(m => m.Address, new { @class = "form-control"})
+        @Html.LabelFor(c => c.Customer.Address.AddressName)
+        @Html.TextBoxFor(c => c.Customer.Address.AddressName, new { @class = "form-control"})
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.DOB)
-        @Html.TextBoxFor(m => m.DOB, new { @class = "form-control"})
+        @Html.LabelFor(c => c.Customer.DOB)
+        @Html.TextBoxFor(c => c.Customer.DOB, new { @class = "form-control"})
     </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Customer.MembershipTypeId)
 
+        @Html.DropDownListFor(c => c.Customer.MembershipTypeId,new SelectList(Model.MembershipTypes, "Id","Name"), "Choose a Subscription Plan", new { @class = "form-control"})
+    </div>
     <div class="checkbox">
         <label>
             @Html.CheckBox("Receive updates on new book arrivals") Receive updates on new book arrivals
         </label>
     </div>
+    <button type="submit" class="btn btn-primary">Save</button>
 }
 
