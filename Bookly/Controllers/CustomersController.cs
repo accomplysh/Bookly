@@ -17,6 +17,23 @@ namespace Bookly.Controllers
         {
             _context = new BooklyContext();
         }
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new NewCustomerFormViewModel
+            {
+                Customer =  customer,
+                MembershipTypes = _context.MembershipTypes.ToList(),
+               // Address = _context.Addresses.SingleOrDefault(a => a.Id == customer.Address.Id)
+                
+            };
+
+            return View("NewCustomerForm",viewModel);
+        }
 
         protected override void Dispose(bool disposing)
         {
@@ -27,20 +44,29 @@ namespace Bookly.Controllers
         {
             var membershipTypes = _context.MembershipTypes.ToList();
 
-            var customerViewModel =  new NewCustomerViewModel
+            var customerViewModel =  new NewCustomerFormViewModel
             {
-                MembershipTypes = membershipTypes
-
-                
+                MembershipTypes = membershipTypes,                
             };
-            return View(customerViewModel);
+            return View("NewCustomerForm",customerViewModel);
         }
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
+            if (customer.Id == 0)
+            {
+                _context.Customers.Add(customer); 
+            }
+            else
+            {
+                var updateCustomer = _context.Customers.Single(c => c.Id == customer.Id);
+                updateCustomer.FirstName = customer.FirstName;
+                updateCustomer.LastName = customer.LastName;
+                updateCustomer.DOB = customer.DOB;
+                updateCustomer.MembershipTypeId = customer.MembershipTypeId;
+            }
             _context.SaveChanges();
-            return RedirectToAction("NewCustomer","Customers");
+            return RedirectToAction("Index","Customers");
         }
 
 

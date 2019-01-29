@@ -1,6 +1,6 @@
 ﻿
 
-@model Bookly.ViewModels.NewCustomerViewModel
+@model Bookly.ViewModels.NewCustomerFormViewModel
 @{
     ViewBag.Title = "NewCustomer";
 }
@@ -26,7 +26,7 @@
 
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.DOB)
-        @Html.TextBoxFor(c => c.Customer.DOB, new { @class = "form-control"})
+        @Html.TextBoxFor(c => c.Customer.DOB, "{0:MMM d yyyy}",  new { @class = "form-control"})
     </div>
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.MembershipTypeId)
@@ -38,6 +38,7 @@
             @Html.CheckBox("Receive updates on new book arrivals") Receive updates on new book arrivals
         </label>
     </div>
+    @Html.HiddenFor(c => c.Customer.Id)
     <button type="submit" class="btn btn-primary">Save</button>
 }
 

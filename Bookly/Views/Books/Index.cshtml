@@ -3,6 +3,9 @@
     ViewBag.Title = "Catalog of Books";
 }
 
+
+@Html.ActionLink("Add Book","Add", "Books", new { @class = "btn btn-primary"})
+
 @foreach (var book in Model)
 {
     <h2>@book.Name</h2>

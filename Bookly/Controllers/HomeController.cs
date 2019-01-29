@@ -8,19 +8,19 @@ namespace Bookly.Controllers
 {
     public class HomeController : Controller
     {
-        //[Route("home/index")]
-        [Route("home/index")]
+       
+       // [Route("home/index")]
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Index(int id)
-        {
-            return Content("Id=" + id);
-            //return HttpNotFound();
-            //return RedirectToAction("About", new { book = "Intelligent Investor", priority = 2});
-            //return View();
-        }
+        //public ActionResult Index(int id)
+        //{
+        //    return Content("Id=" + id);
+        //    //return HttpNotFound();
+        //    //return RedirectToAction("About", new { book = "Intelligent Investor", priority = 2});
+        //    //return View();
+        //}
 
         public ActionResult About()
         {

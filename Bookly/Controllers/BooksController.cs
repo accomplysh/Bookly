@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using Bookly.Models;
+using Bookly.ViewModels;
+
 namespace Bookly.Controllers
 {
     public class BooksController : Controller
@@ -28,6 +30,18 @@ namespace Bookly.Controllers
 
             return View(books);
         }
+        public ActionResult Add()
+        {
+            var categories = _context.BookCategories.ToList();
+
+            var viewModel = new AddBookViewModel
+            {
+                BookCategories = categories
+            };
+
+            return View("AddBookForm", viewModel);
+        }
+
         [Route("books/releasedate/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1, 12)}")]
         public ActionResult ByReleaseDate(int year, int month)
         {
