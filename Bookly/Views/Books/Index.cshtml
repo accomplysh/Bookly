@@ -8,9 +8,12 @@
 
 @foreach (var book in Model)
 {
-    <h2>@book.Name</h2>
+    <h1>@Html.ActionLink(book.Name,"Edit","Books", new {id = book.Id}, null)</h1>
+    
     <h3>@book.Author</h3>
-    <h3>Category: @book.BookCategory.Name</h3>
+
+    @*Replace mode with BookViewModel and add Category*@
+    @*<h3>Category: @book.Name</h3>*@
     <h3>@book.Publisher, @book.YearPublished</h3>
 }
 

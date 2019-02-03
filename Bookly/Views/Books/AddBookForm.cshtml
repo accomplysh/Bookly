@@ -1,4 +1,5 @@
-﻿@model Bookly.ViewModels.AddBookViewModel
+﻿@using System.Web.UI.WebControls
+@model Bookly.ViewModels.AddBookViewModel
 @{
     ViewBag.Title = "AddBookForm";
 }
@@ -7,37 +8,47 @@
 
 @using (Html.BeginForm("Save", "Books"))
 {
+    @Html.ValidationSummary()
     <div class="form-group">
         @Html.LabelFor(b => b.Book.Name)
-        @Html.TextBoxFor(b => b.Book.Name, new { @class = "form-control"})
+        @Html.TextBoxFor(b => b.Book.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.Book.Name)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(b => b.Book.Author)
-        @Html.TextBoxFor(b => b.Book.Author, new {@class = "form-control"})
+        @Html.TextBoxFor(b => b.Book.Author, new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.Book.Author)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(b => b.Book.Publisher)
-        @Html.TextBoxFor(b => b.Book.Publisher, new {@class="form-control"})
+        @Html.TextBoxFor(b => b.Book.Publisher, new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.Book.Publisher)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(b => b.Book.YearPublished)
-        @Html.TextBoxFor(b => b.Book.YearPublished, new {@class="form-control"})
+        @Html.TextBoxFor(b => b.Book.YearPublished, new { @class = "form-control" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(b => b.Book.ISBN)
-        @Html.TextBoxFor(b => b.Book.ISBN, new {@class = "form-control"})
+        @Html.TextBoxFor(b => b.Book.ISBN, new { @class = "form-control" })
+        @Html.ValidationMessageFor(b => b.Book.ISBN)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(b => b.BookCategories)
-        @Html.DropDownListFor(b => b.BookCategories, new SelectList(Model.BookCategories, "Id", "Name"), "Select Category", new {@class = "form-control"})
+        @Html.LabelFor(b => b.Book.BookCategoryId)
+        @Html.DropDownListFor(b => b.Book.BookCategoryId, new SelectList(Model.BookCategories, "Id", "Name"), "Select Category", new { @class = "form-control" })
     </div>
-   
+    @Html.HiddenFor(b => b.Book.Id)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 
+    
 }
-
+@section scripts
+{ 
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -324,6 +324,34 @@
     <Compile Include="Migrations\201901291148378_addDataAnnotationsForBookModel.Designer.cs">
       <DependentUpon>201901291148378_addDataAnnotationsForBookModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901291219030_foreignKeyInBookModelforBookCategory.cs" />
+    <Compile Include="Migrations\201901291219030_foreignKeyInBookModelforBookCategory.Designer.cs">
+      <DependentUpon>201901291219030_foreignKeyInBookModelforBookCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901291227584_removeBookCategoryPropertyFromBookModel.cs" />
+    <Compile Include="Migrations\201901291227584_removeBookCategoryPropertyFromBookModel.Designer.cs">
+      <DependentUpon>201901291227584_removeBookCategoryPropertyFromBookModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901291243429_addedBackBookCategoryNavigationProperty.cs" />
+    <Compile Include="Migrations\201901291243429_addedBackBookCategoryNavigationProperty.Designer.cs">
+      <DependentUpon>201901291243429_addedBackBookCategoryNavigationProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901301009439_removeDuplicateBooks.cs" />
+    <Compile Include="Migrations\201901301009439_removeDuplicateBooks.Designer.cs">
+      <DependentUpon>201901301009439_removeDuplicateBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901301011271_removeDuplicateBooks2.cs" />
+    <Compile Include="Migrations\201901301011271_removeDuplicateBooks2.Designer.cs">
+      <DependentUpon>201901301011271_removeDuplicateBooks2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031035475_addAddressIdToCustomerModel.cs" />
+    <Compile Include="Migrations\201902031035475_addAddressIdToCustomerModel.Designer.cs">
+      <DependentUpon>201902031035475_addAddressIdToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902031117075_removeAddressIdPropertyFromCustomerModel.cs" />
+    <Compile Include="Migrations\201902031117075_removeAddressIdPropertyFromCustomerModel.Designer.cs">
+      <DependentUpon>201902031117075_removeAddressIdPropertyFromCustomerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BookCategory.cs" />
@@ -332,6 +360,7 @@
     <Compile Include="Models\BookStatus.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\ValidateDOB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AddBookViewModel.cs" />
     <Compile Include="ViewModels\CustomerBooksViewModel.cs" />
@@ -530,6 +559,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901291148378_addDataAnnotationsForBookModel.resx">
       <DependentUpon>201901291148378_addDataAnnotationsForBookModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291219030_foreignKeyInBookModelforBookCategory.resx">
+      <DependentUpon>201901291219030_foreignKeyInBookModelforBookCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291227584_removeBookCategoryPropertyFromBookModel.resx">
+      <DependentUpon>201901291227584_removeBookCategoryPropertyFromBookModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291243429_addedBackBookCategoryNavigationProperty.resx">
+      <DependentUpon>201901291243429_addedBackBookCategoryNavigationProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901301009439_removeDuplicateBooks.resx">
+      <DependentUpon>201901301009439_removeDuplicateBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901301011271_removeDuplicateBooks2.resx">
+      <DependentUpon>201901301011271_removeDuplicateBooks2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031035475_addAddressIdToCustomerModel.resx">
+      <DependentUpon>201902031035475_addAddressIdToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902031117075_removeAddressIdPropertyFromCustomerModel.resx">
+      <DependentUpon>201902031117075_removeAddressIdPropertyFromCustomerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

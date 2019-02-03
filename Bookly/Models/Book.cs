@@ -10,23 +10,24 @@ namespace Bookly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter the book name.")]
         [StringLength(255)]
         public string Name { get; set; }
         [Display(Name = "Year Published")]
         [Required]
         public int YearPublished { get; set; }
 
-        [Required]
+        
+        [Required(ErrorMessage = "Enter the name of the Author")]
         public string Author { get; set; }
 
         [Required]
         public string Publisher { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ISBN can't be blank")]
         public string ISBN { get; set; }
         public BookCategory BookCategory { get; set; }
-
+        public byte BookCategoryId { get; set; }
        // public Customer Customer { get; set; }
 
 

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Bookly.Models;
 using Bookly.ViewModels;
 
+
 namespace Bookly.Controllers
 {
     public class CustomersController : Controller
@@ -19,17 +20,15 @@ namespace Bookly.Controllers
         }
         public ActionResult Edit(int id)
         {
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
-
+            var customer = _context.Customers.Include(c => c.Address).SingleOrDefault(c => c.Id == id);
+           
             if (customer == null)
                 return HttpNotFound();
 
             var viewModel = new NewCustomerFormViewModel
             {
                 Customer =  customer,
-                MembershipTypes = _context.MembershipTypes.ToList(),
-               // Address = _context.Addresses.SingleOrDefault(a => a.Id == customer.Address.Id)
-                
+                MembershipTypes = _context.MembershipTypes.ToList(),                             
             };
 
             return View("NewCustomerForm",viewModel);
@@ -53,17 +52,30 @@ namespace Bookly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new NewCustomerFormViewModel()
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList(),                    
+                    Address = customer.Address                   
+                };               
+            }
+
             if (customer.Id == 0)
             {
-                _context.Customers.Add(customer); 
+                _context.Customers.Add(customer);
+                _context.Addresses.Add(customer.Address);
             }
             else
             {
-                var updateCustomer = _context.Customers.Single(c => c.Id == customer.Id);
+                var updateCustomer = _context.Customers.Include(a => a.Address).Single(c => c.Id == customer.Id);
+                var updateAddress = _context.Addresses.SingleOrDefault(a => a.Id == updateCustomer.Address.Id);
                 updateCustomer.FirstName = customer.FirstName;
                 updateCustomer.LastName = customer.LastName;
                 updateCustomer.DOB = customer.DOB;
                 updateCustomer.MembershipTypeId = customer.MembershipTypeId;
+                updateAddress.AddressName = customer.Address.AddressName;
             }
             _context.SaveChanges();
             return RedirectToAction("Index","Customers");

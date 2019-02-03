@@ -12,21 +12,25 @@
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.FirstName)
         @Html.TextBoxFor(c => c.Customer.FirstName, new { @class = "form-control"})
+        @Html.ValidationMessageFor(c => c.Customer.FirstName)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.LastName)
         @Html.TextBoxFor(c => c.Customer.LastName, new  { @class = "form-control"})
+        @Html.ValidationMessageFor(c => c.Customer.LastName)
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(c => c.Customer.Address.AddressName)
+        @Html.LabelFor(c => c.Customer.Address)
         @Html.TextBoxFor(c => c.Customer.Address.AddressName, new { @class = "form-control"})
+        @Html.ValidationMessageFor(c => c.Customer.Address.AddressName)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.DOB)
         @Html.TextBoxFor(c => c.Customer.DOB, "{0:MMM d yyyy}",  new { @class = "form-control"})
+        @Html.ValidationMessageFor(c => c.Customer.DOB)
     </div>
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.MembershipTypeId)
